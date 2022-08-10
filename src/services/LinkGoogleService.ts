@@ -33,7 +33,7 @@ export default class LinkGoogleService {
     }
 
     const tokenResponse = await axios.post<IGoogleTokenResponse>(
-      `https://oauth2.googleapis.com/token?code=${google_code}&client_id=${process.env.GOOGLE_CLIENT}&client_secret=${process.env.GOOGLE_SECRET}&redirect_uri=http%3A%2F%2Flocalhost%3A3000&grant_type=authorization_code`
+      `https://oauth2.googleapis.com/token?code=${google_code}&client_id=${process.env.GOOGLE_CLIENT}&client_secret=${process.env.GOOGLE_SECRET}&redirect_uri=https%3A%2F%2Fbase-autenticacao-no-react-com-context-api-e-hooks.vercel.app&grant_type=authorization_code`
     )
 
     const tokenInfoResponse = await axios.post<IGoogleTokenInfoResponse>(
